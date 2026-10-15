@@ -1,0 +1,42 @@
+/* Bunker Hause — stylesheet entry point.
+   Order matters: tokens → base → layout → components → sections.
+   To add a section: create css/sections/<name>.css and import it below.
+   For production, bundle these imports into one file (e.g. with Lightning CSS or esbuild). */
+
+/* Base */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/typography.css");
+@import url("base/utilities.css");
+
+/* Layout */
+@import url("layout/container.css");
+@import url("layout/section.css");
+
+/* Components (reusable on any page) */
+@import url("components/icon.css");
+@import url("components/button.css");
+@import url("components/field.css");
+@import url("components/tag.css");
+@import url("components/lang-switch.css");
+@import url("components/carousel.css");
+@import url("components/event-card.css");
+@import url("components/room-card.css");
+@import url("components/experience-card.css");
+@import url("components/journal-card.css");
+@import url("components/overlay.css");
+@import url("components/book-panel.css");
+@import url("components/mobile-menu.css");
+@import url("components/mobile-bar.css");
+
+/* Sections (page-level blocks) */
+@import url("sections/header.css");
+@import url("sections/hero.css");
+@import url("sections/booking-bar.css");
+@import url("sections/manifesto.css");
+@import url("sections/agenda.css");
+@import url("sections/rooms.css");
+@import url("sections/space-band.css");
+@import url("sections/experiences.css");
+@import url("sections/journal.css");
+@import url("sections/footer.css");

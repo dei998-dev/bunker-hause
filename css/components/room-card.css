@@ -1,0 +1,15 @@
+.room-card { background: transparent; border-radius: 0; overflow: visible; }
+.room-card .card__media { aspect-ratio: 3 / 4; }
+.room-card .card__body { padding: var(--space-4) 0 0; }
+.room-card__plaque {
+  position: absolute; left: 50%; bottom: var(--space-4); transform: translateX(-50%);
+  padding: var(--space-1) var(--space-3); border-radius: 2px;
+  background: var(--brand-terracotta); color: var(--brand-white);
+  font-weight: 800; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+}
+.room-card__badge {
+  position: absolute; top: var(--space-4); left: var(--space-4);
+  padding: var(--space-1) var(--space-3); border-radius: var(--radius-sm);
+  background: var(--brand-white); color: var(--brand-teal);
+  font-weight: 800; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+}

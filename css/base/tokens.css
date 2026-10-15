@@ -1,0 +1,101 @@
+/* Bunker Hause — design tokens (from the Bunker Hause design system).
+   Brand colours come from the Nasara proposal; logo and type from the Manual de Marca.
+   Components use the semantic tokens (surface, ink, accent…), never raw hex. */
+
+:root,
+[data-theme="light"] {
+  /* Brand palette */
+  --brand-terracotta: #af451e;
+  --brand-teal: #113b40;
+  --brand-apricot: #e28f4a;
+  --brand-paper: #f0f0ef;
+  --brand-white: #ffffff;
+  --brand-charcoal: #343235;
+  --teal-deep: #0c292d;
+
+  /* Semantic — Papel (light) theme */
+  --surface: var(--brand-paper);
+  --surface-raised: var(--brand-white);
+  --surface-inverse: var(--brand-teal);
+  --surface-accent: var(--brand-terracotta);
+  --on-surface-accent: var(--brand-white);
+  --ink: var(--brand-teal);
+  --ink-muted: #3e5f63;
+  --ink-inverse: var(--brand-paper);
+  --hairline: rgba(17, 59, 64, 0.18);
+  --control-border: var(--brand-teal);
+  --accent: var(--brand-terracotta);
+  --accent-hover: #9a3d1a;
+  --on-accent: var(--brand-white);
+  --focus-ring: var(--brand-teal);
+  --link: var(--brand-terracotta);
+  --danger: var(--brand-terracotta);
+  --success: var(--brand-teal);
+  --scrim: rgba(12, 41, 45, 0.72);
+  --shadow-sheet: 0 24px 48px rgba(12, 41, 45, 0.22);
+
+  /* Event categories (chip fill / text) */
+  --cat-comunidad: var(--brand-terracotta);  --on-cat-comunidad: var(--brand-white);
+  --cat-comedia: var(--brand-apricot);       --on-cat-comedia: var(--brand-teal);
+  --cat-bienestar: var(--brand-teal);        --on-cat-bienestar: var(--brand-paper);
+  --cat-talleres: var(--brand-charcoal);     --on-cat-talleres: var(--brand-white);
+  --cat-musica: var(--brand-paper);          --on-cat-musica: var(--brand-teal);
+}
+
+/* Petróleo (dark) theme — apply data-theme="dark" to any section to flip it */
+[data-theme="dark"] {
+  --surface: var(--brand-teal);
+  --surface-raised: var(--teal-deep);
+  --surface-inverse: var(--brand-paper);
+  --ink: var(--brand-paper);
+  --ink-muted: #c3cccc;
+  --ink-inverse: var(--brand-teal);
+  --hairline: rgba(240, 240, 239, 0.22);
+  --control-border: var(--brand-paper);
+  --accent: var(--brand-apricot);
+  --accent-hover: #e6a065;
+  --on-accent: var(--brand-teal);
+  --focus-ring: var(--brand-apricot);
+  --link: var(--brand-apricot);
+  --danger: var(--brand-apricot);
+  --success: var(--brand-paper);
+  --scrim: rgba(12, 41, 45, 0.80);
+  --shadow-sheet: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+:root {
+  /* Type */
+  --font-display: "Roxborough CF", "DM Serif Display", Georgia, serif;
+  --font-sans: Montserrat, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Spacing */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;  --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;  --space-10: 128px;
+
+  /* Radius — from the proposal's shapes */
+  --radius-none: 0;
+  --radius-sm: 10px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-squircle: 22%;
+  --notch: 14px;
+  --radius-oval: 50%;
+
+  /* Layout */
+  --tap-target: 44px;
+  --header-height: 76px;
+  --container: 1200px;
+  --gutter: var(--space-6);
+  --measure: 68ch;
+
+  /* Motion */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --dur-press: 120ms;
+  --dur-hover: 160ms;
+  --dur-panel-in: 240ms;
+  --dur-panel-out: 180ms;
+}
+
+@media (max-width: 900px) {
+  :root { --header-height: 64px; --gutter: var(--space-4); }
+}

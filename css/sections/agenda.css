@@ -1,0 +1,18 @@
+.agenda { background: var(--surface); }
+.filters { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-5); }
+.filter {
+  display: inline-flex; align-items: center; gap: var(--space-2); min-height: var(--tap-target); padding: 0 var(--space-4);
+  border-radius: var(--radius-sm); border: 1.5px solid var(--control-border); background: transparent; color: var(--ink);
+  font-weight: 800; font-size: 13px; letter-spacing: 0.04em; cursor: pointer;
+  transition: background-color var(--dur-hover), color var(--dur-hover);
+}
+.filter__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--dot, transparent); border: 1.5px solid var(--brand-teal); }
+.filter[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.filter[aria-pressed="true"] .filter__dot { border-color: var(--brand-paper); }
+.filter:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .filter[aria-pressed="false"]:hover { background: rgba(17, 59, 64, .06); } }
+@media (max-width: 700px) {
+  .filters { flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scrollbar-width: none; }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter { flex: none; }
+}

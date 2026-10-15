@@ -1,0 +1,4 @@
+.journal { background: var(--brand-white); }
+.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+@media (max-width: 900px) { .journal-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .journal-grid { grid-template-columns: 1fr; } }

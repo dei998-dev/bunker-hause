@@ -1,0 +1,24 @@
+.site-footer { position: relative; overflow: hidden; padding: var(--space-9) 0 0; background: var(--surface); color: var(--ink); }
+.site-footer__top { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+.newsletter__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.08; max-width: 18ch; }
+.newsletter__form { display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); align-items: end; margin-top: var(--space-6); max-width: 520px; }
+.newsletter__status { grid-column: 1 / -1; font-size: 14px; color: var(--ink-muted); }
+.newsletter__status:empty { display: none; }
+.site-footer__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+.site-footer__h { margin-bottom: var(--space-3); font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand-apricot); }
+.site-footer address, .site-footer__list { font-size: 15px; line-height: 1.7; }
+.site-footer__list li + li { margin-top: var(--space-1); }
+.site-footer a { text-underline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .site-footer a:hover { color: var(--brand-apricot); } }
+.site-footer__bottom { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--space-5); margin-top: var(--space-8); padding-bottom: var(--space-6); }
+.site-footer__logo { width: 110px; height: 110px; }
+.site-footer__legal { font-size: 14px; color: var(--ink-muted); }
+.site-footer__mountains { position: relative; display: block; width: 100%; height: clamp(110px, 15vw, 230px); object-fit: cover; object-position: center top; margin-top: calc(-1 * var(--space-6)); opacity: .9; pointer-events: none; }
+@media (max-width: 900px) {
+  .site-footer { padding-top: var(--space-8); }
+  .site-footer__top { grid-template-columns: 1fr; gap: var(--space-7); }
+  .site-footer__cols { grid-template-columns: 1fr 1fr; }
+  .newsletter__form { grid-template-columns: 1fr; }
+  .site-footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) { .site-footer__cols { grid-template-columns: 1fr; } }

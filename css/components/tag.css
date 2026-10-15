@@ -1,0 +1,11 @@
+.tag {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  min-height: 28px; padding: 0 var(--space-3); border-radius: var(--radius-sm); border: 1.5px solid transparent;
+  font-weight: 800; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+}
+.tag--comunidad { background: var(--cat-comunidad); color: var(--on-cat-comunidad); }
+.tag--comedia   { background: var(--cat-comedia); color: var(--on-cat-comedia); }
+.tag--bienestar { background: var(--cat-bienestar); color: var(--on-cat-bienestar); }
+.tag--talleres  { background: var(--cat-talleres); color: var(--on-cat-talleres); }
+.tag--musica    { background: var(--cat-musica); color: var(--on-cat-musica); border-color: var(--brand-teal); }
+[data-theme="dark"] .tag--bienestar, [data-theme="dark"] .tag--talleres { border-color: var(--brand-paper); }

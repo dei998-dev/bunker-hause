@@ -1,0 +1,14 @@
+/* Type scale from the design system */
+.display-xl { font-family: var(--font-display); font-weight: 400; font-size: clamp(52px, 7vw, 96px); line-height: .95; letter-spacing: -0.01em; }
+.display    { font-family: var(--font-display); font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1; }
+.title-1, .section-head h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 4vw, 44px); line-height: 1.05; }
+.title-2    { font-family: var(--font-display); font-weight: 400; font-size: 28px; line-height: 1.15; }
+.heading    { font-weight: 800; font-size: 22px; line-height: 1.25; }
+.subheading { font-weight: 800; font-size: 17px; line-height: 1.35; }
+.eyebrow    { font-weight: 800; font-size: 12px; line-height: 1.33; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); }
+.body-lg    { font-size: 18px; line-height: 1.65; }
+.body-sm    { font-size: 14px; line-height: 1.55; }
+.note       { font-size: 14px; line-height: 1.55; font-style: italic; color: var(--ink-muted); }
+.label      { font-weight: 800; font-size: 14px; line-height: 1.43; letter-spacing: 0.02em; }
+.price      { font-weight: 800; font-size: 20px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.link       { color: var(--link); text-underline-offset: 3px; }

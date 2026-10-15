@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>Bunker Hause · Hostal cultural en Quito</title>
+  <meta name="description" content="Hostal cultural en Quito: camas y habitaciones privadas, rooftop, coworking y una agenda de comunidad, comedia, bienestar y talleres cada semana.">
+  <meta name="theme-color" content="#113b40">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+
+  <!-- Fonts: Roxborough CF is licensed; DM Serif Display stands in until the webfont files arrive -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:ital,wght@0,400;0,800;1,400&display=swap">
+
+  <!-- Styles: one entry file that imports base → layout → components → sections -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" data-module="header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="#top" data-i18n-attr="aria-label:a11y.home">
+        <img class="logo-on-dark" src="assets/img/logo/wordmark-white.png" alt="" width="600" height="361">
+        <img class="logo-on-light" src="assets/img/logo/wordmark-teal.png" alt="" width="600" height="361">
+      </a>
+
+      <nav class="site-nav" data-i18n-attr="aria-label:nav.label">
+        <a href="#habitaciones" data-i18n="nav.rooms">Habitaciones</a>
+        <a href="#agenda" data-i18n="nav.agenda">La Agenda</a>
+        <a href="#experiencias" data-i18n="nav.experiences">Experiencias</a>
+        <a href="#espacio" data-i18n="nav.space">Alquila el espacio</a>
+        <a href="#journal" data-i18n="nav.journal">Journal</a>
+      </nav>
+
+      <div class="site-header__end">
+        <div class="lang-switch" role="group" data-module="lang-switch" data-i18n-attr="aria-label:a11y.language">
+          <button type="button" lang="es" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="btn btn--primary site-header__book" type="button" data-open="book-panel" data-i18n="cta.book">Reservar</button>
+        <button class="icon-btn site-header__menu" type="button" data-open="mobile-menu" aria-controls="mobile-menu" aria-expanded="false" data-i18n-attr="aria-label:a11y.openMenu">
+          <svg class="icon" data-icon="menu" aria-hidden="true"></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" data-module="hero" aria-roledescription="carousel" data-i18n-attr="aria-label:hero.label">
+      <svg class="hero__swoosh" data-shape="swoosh" aria-hidden="true"></svg>
+      <div class="hero__inner container">
+        <div class="hero__slides" data-hero-slides><!-- rendered from js/data/slides.js --></div>
+        <div class="hero__controls">
+          <div class="hero__dots" role="tablist" data-hero-dots></div>
+          <button class="icon-btn icon-btn--inverse" type="button" data-hero-toggle data-i18n-attr="aria-label:hero.pause">
+            <svg class="icon" data-icon="pause" aria-hidden="true"></svg>
+          </button>
+        </div>
+      </div>
+      <img class="hero__mountains" src="assets/img/illustrations/mountains-range-paper.png" alt="" width="1376" height="303">
+    </section>
+
+    <!-- ============ BOOKING BAR ============ -->
+    <div class="booking-bar-wrap container">
+      <form class="booking-bar" data-module="booking-bar" novalidate>
+        <div class="field">
+          <label for="bb-in" data-i18n="booking.checkin">Llegada</label>
+          <input id="bb-in" name="checkin" type="date" required>
+        </div>
+        <div class="field">
+          <label for="bb-out" data-i18n="booking.checkout">Salida</label>
+          <input id="bb-out" name="checkout" type="date" required>
+        </div>
+        <div class="field">
+          <label for="bb-guests" data-i18n="booking.guests">Huéspedes</label>
+          <div class="field__control">
+            <select id="bb-guests" name="guests" data-options="guests"></select>
+            <svg class="icon" data-icon="chevron-down" aria-hidden="true"></svg>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--lg" type="submit">
+          <span data-i18n="booking.submit">Ver disponibilidad</span>
+          <svg class="icon" data-icon="arrow-right" aria-hidden="true"></svg>
+        </button>
+        <p class="booking-bar__status" role="status" aria-live="polite" data-booking-status></p>
+      </form>
+    </div>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="section manifesto" aria-labelledby="manifesto-title">
+      <div class="container manifesto__inner">
+        <p class="eyebrow" data-i18n="manifesto.eyebrow">Hostal cultural · Quito</p>
+        <h1 class="manifesto__title" id="manifesto-title" data-i18n="manifesto.title">Una casa para la cultura, las ideas y la gente curiosa.</h1>
+        <p class="manifesto__body" data-i18n="manifesto.body">Somos un hostal en el centro-norte de Quito con camas, habitaciones privadas, coworking y un rooftop con vista a la ciudad. Cada semana abrimos la casa a comedia, comunidad, bienestar y talleres. Ven a dormir, quédate por la gente.</p>
+        <ul class="manifesto__facts" data-render="facts"></ul>
+      </div>
+      <svg class="manifesto__shape manifesto__shape--oval" data-shape="oval" aria-hidden="true"></svg>
+      <svg class="manifesto__shape manifesto__shape--squircle" data-shape="squircle" aria-hidden="true"></svg>
+    </section>
+
+    <!-- ============ LA AGENDA ============ -->
+    <section class="section agenda" id="agenda" data-module="agenda" aria-labelledby="agenda-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow" data-i18n="agenda.eyebrow">Programación cultural</p>
+            <h2 id="agenda-title" data-i18n="agenda.title">La Agenda</h2>
+            <p class="section-head__intro" data-i18n="agenda.intro">Comedia, comunidad, bienestar y talleres. Cada semana algo nuevo en la Hause.</p>
+          </div>
+          <div class="carousel-arrows" data-carousel-arrows="agenda-track"></div>
+        </header>
+        <div class="filters" role="group" data-agenda-filters data-i18n-attr="aria-label:agenda.filterLabel"></div>
+      </div>
+      <div class="carousel" data-module="carousel" id="agenda-track" tabindex="0" data-i18n-attr="aria-label:agenda.title">
+        <ul class="carousel__track" data-agenda-list></ul>
+      </div>
+      <div class="container section-foot">
+        <a class="btn btn--secondary" href="#agenda" data-i18n="agenda.all">Ver toda la agenda</a>
+      </div>
+    </section>
+
+    <!-- ============ HABITACIONES ============ -->
+    <section class="section rooms" id="habitaciones" aria-labelledby="rooms-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow" data-i18n="rooms.eyebrow">Duerme en la Hause</p>
+            <h2 id="rooms-title" data-i18n="rooms.title">Habitaciones</h2>
+            <p class="section-head__intro" data-i18n="rooms.intro">Camas en dormitorio y habitaciones privadas con luz natural, baños compartidos, terraza y wifi rápido.</p>
+          </div>
+          <div class="carousel-arrows" data-carousel-arrows="rooms-track"></div>
+        </header>
+      </div>
+      <div class="carousel" data-module="carousel" id="rooms-track" tabindex="0" data-i18n-attr="aria-label:rooms.title">
+        <ul class="carousel__track" data-render="rooms"></ul>
+      </div>
+      <div class="container">
+        <ul class="amenities" data-render="amenities"></ul>
+      </div>
+    </section>
+
+    <!-- ============ ALQUILA EL ESPACIO ============ -->
+    <section class="section space-band" id="espacio" aria-labelledby="space-title">
+      <div class="container space-band__inner">
+        <div class="space-band__text">
+          <p class="eyebrow" data-i18n="space.eyebrow">Alquila el espacio</p>
+          <h2 id="space-title" data-i18n="space.title">Tu taller, tu show, tu comunidad. En nuestra casa.</h2>
+          <p class="space-band__body" data-i18n="space.body">Charlas, talleres, shows, cumpleaños y lanzamientos. Te damos el rooftop, la sala o el bar, el sonido y la difusión en nuestra comunidad.</p>
+          <ul class="space-band__list" data-render="spaces"></ul>
+          <div class="space-band__actions">
+            <button class="btn btn--light btn--lg" type="button" data-open="book-panel" data-panel-item="space" data-i18n="space.cta">Cotiza tu evento</button>
+            <a class="btn btn--inverse" data-whatsapp="space" href="#" target="_blank" rel="noopener">
+              <svg class="icon" data-icon="chat" aria-hidden="true"></svg>
+              <span data-i18n="cta.whatsapp">Escríbenos por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <figure class="space-band__media">
+          <img class="ticket" src="assets/img/photos/tile-wall-cocktail.jpg" alt="" data-i18n-attr="alt:space.photoAlt" width="800" height="1200" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <img class="space-band__leaf" src="assets/img/illustrations/monstera-engraved-tilt-paper.png" alt="" width="765" height="619" loading="lazy">
+    </section>
+
+    <!-- ============ EXPERIENCIAS ============ -->
+    <section class="section experiences" id="experiencias" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow" data-i18n="exp.eyebrow">Recomendados por la casa</p>
+            <h2 id="exp-title" data-i18n="exp.title">Experiencias</h2>
+            <p class="section-head__intro" data-i18n="exp.intro">Planes que hacemos y recomendamos, en Quito y alrededor. Pregunta en recepción por los tours de la semana.</p>
+          </div>
+        </header>
+        <ul class="exp-grid" data-render="experiences"></ul>
+      </div>
+    </section>
+
+    <!-- ============ JOURNAL ============ -->
+    <section class="section journal" id="journal" aria-labelledby="journal-title">
+      <div class="container">
+        <header class="section-head">
+          <div class="section-head__text">
+            <p class="eyebrow" data-i18n="journal.eyebrow">Historias de la casa</p>
+            <h2 id="journal-title" data-i18n="journal.title">Del Journal</h2>
+          </div>
+          <a class="btn btn--ghost" href="#journal">
+            <span data-i18n="journal.all">Ver todo el Journal</span>
+            <svg class="icon" data-icon="arrow-right" aria-hidden="true"></svg>
+          </a>
+        </header>
+        <ul class="journal-grid" data-render="journal"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" data-theme="dark">
+    <div class="container site-footer__top">
+      <div class="newsletter">
+        <h2 class="newsletter__title" data-i18n="footer.newsTitle">Entérate primero de lo que pasa en la Hause.</h2>
+        <form class="newsletter__form" data-module="newsletter" novalidate>
+          <div class="field">
+            <label for="nl-email" data-i18n="footer.emailLabel">Tu correo</label>
+            <input id="nl-email" name="email" type="email" autocomplete="email" inputmode="email" autocapitalize="none" enterkeyhint="send" required>
+          </div>
+          <button class="btn btn--primary btn--lg" type="submit" data-i18n="footer.subscribe">Suscribirme</button>
+          <p class="newsletter__status" role="status" aria-live="polite" data-newsletter-status></p>
+        </form>
+      </div>
+      <div class="site-footer__cols">
+        <div>
+          <h3 class="site-footer__h" data-i18n="footer.visit">Visítanos</h3>
+          <address data-render="address"></address>
+        </div>
+        <div>
+          <h3 class="site-footer__h" data-i18n="footer.hours">Horarios</h3>
+          <ul class="site-footer__list" data-render="hours"></ul>
+        </div>
+        <div>
+          <h3 class="site-footer__h" data-i18n="footer.contact">Contacto</h3>
+          <ul class="site-footer__list" data-render="contact"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="container site-footer__bottom">
+      <img class="site-footer__logo" src="assets/img/logo/logo-framed-white.png" alt="Bunker Hause" width="800" height="800" loading="lazy">
+      <p class="site-footer__legal"><span data-year></span> Bunker Hause · <span data-i18n="footer.rights">Hostal cultural en Quito</span></p>
+    </div>
+    <img class="site-footer__mountains" src="assets/img/illustrations/mountains-wide-paper.png" alt="" width="1363" height="292" loading="lazy">
+  </footer>
+
+  <!-- ============ BOOK PANEL (dialog) ============ -->
+  <div class="overlay" id="book-panel" data-module="book-panel" hidden>
+    <div class="overlay__backdrop" data-close></div>
+    <div class="book-panel" role="dialog" aria-modal="true" aria-labelledby="book-panel-title">
+      <div class="book-panel__list">
+        <div class="book-panel__top">
+          <p class="book-panel__eyebrow" id="book-panel-title" data-i18n="cta.book">Reservar</p>
+          <button class="icon-btn" type="button" data-close data-i18n-attr="aria-label:a11y.close">
+            <svg class="icon" data-icon="close" aria-hidden="true"></svg>
+          </button>
+        </div>
+        <ul data-render="panel-items"></ul>
+      </div>
+      <div class="book-panel__photo" aria-hidden="true">
+        <img src="" alt="" data-panel-photo>
+        <div class="book-panel__caption">
+          <b data-panel-title></b>
+          <span data-panel-text></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MOBILE MENU (dialog) ============ -->
+  <div class="overlay overlay--menu" id="mobile-menu" data-module="mobile-menu" hidden>
+    <div class="mobile-menu" role="dialog" aria-modal="true" data-i18n-attr="aria-label:nav.label">
+      <div class="mobile-menu__top">
+        <img src="assets/img/logo/wordmark-white.png" alt="Bunker Hause" width="600" height="361">
+        <button class="icon-btn icon-btn--inverse" type="button" data-close data-i18n-attr="aria-label:a11y.close">
+          <svg class="icon" data-icon="close" aria-hidden="true"></svg>
+        </button>
+      </div>
+      <nav class="mobile-menu__nav">
+        <a href="#habitaciones" data-close data-i18n="nav.rooms">Habitaciones</a>
+        <a href="#agenda" data-close data-i18n="nav.agenda">La Agenda</a>
+        <a href="#experiencias" data-close data-i18n="nav.experiences">Experiencias</a>
+        <a href="#espacio" data-close data-i18n="nav.space">Alquila el espacio</a>
+        <a href="#journal" data-close data-i18n="nav.journal">Journal</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <div class="lang-switch lang-switch--inverse" role="group" data-module="lang-switch" data-i18n-attr="aria-label:a11y.language">
+          <button type="button" lang="es" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <img class="mobile-menu__mountains" src="assets/img/illustrations/mountains-range-paper.png" alt="" width="1376" height="303">
+    </div>
+  </div>
+
+  <!-- ============ MOBILE BOOK BAR ============ -->
+  <div class="mobile-bar" data-module="mobile-bar">
+    <button class="btn btn--primary btn--lg" type="button" data-open="book-panel" data-i18n="cta.book">Reservar</button>
+    <a class="mobile-bar__round" data-whatsapp="general" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg class="icon" data-icon="chat" aria-hidden="true"></svg>
+    </a>
+    <button class="mobile-bar__round" type="button" data-open="mobile-menu" aria-controls="mobile-menu" data-i18n-attr="aria-label:a11y.openMenu">
+      <svg class="icon" data-icon="menu" aria-hidden="true"></svg>
+    </button>
+  </div>
+
+  <!-- Scripts: plain scripts in dependency order (work from file:// and any static host).
+       core → data → components (templates) → modules (behaviour) → main (boot). -->
+  <script src="js/core/namespace.js"></script>
+  <script src="js/core/dom.js"></script>
+  <script src="js/core/storage.js"></script>
+  <script src="js/core/icons.js"></script>
+  <script src="js/core/shapes.js"></script>
+  <script src="js/core/i18n.js"></script>
+  <script src="js/data/strings.js"></script>
+  <script src="js/data/site.js"></script>
+  <script src="js/data/slides.js"></script>
+  <script src="js/data/events.js"></script>
+  <script src="js/data/rooms.js"></script>
+  <script src="js/data/spaces.js"></script>
+  <script src="js/data/experiences.js"></script>
+  <script src="js/data/journal.js"></script>
+  <script src="js/components/format.js"></script>
+  <script src="js/components/category-tag.js"></script>
+  <script src="js/components/event-card.js"></script>
+  <script src="js/components/room-card.js"></script>
+  <script src="js/components/experience-card.js"></script>
+  <script src="js/components/journal-card.js"></script>
+  <script src="js/modules/render.js"></script>
+  <script src="js/modules/header.js"></script>
+  <script src="js/modules/lang-switch.js"></script>
+  <script src="js/modules/hero.js"></script>
+  <script src="js/modules/carousel.js"></script>
+  <script src="js/modules/agenda.js"></script>
+  <script src="js/modules/booking-bar.js"></script>
+  <script src="js/modules/overlay.js"></script>
+  <script src="js/modules/book-panel.js"></script>
+  <script src="js/modules/mobile-menu.js"></script>
+  <script src="js/modules/newsletter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

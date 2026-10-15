@@ -1,0 +1,18 @@
+.icon { width: 20px; height: 20px; flex: none; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.shape { display: block; }
+.shape path { fill: currentColor; }
+
+.icon-btn {
+  display: inline-grid; place-items: center; flex: none;
+  width: var(--tap-target); height: var(--tap-target);
+  border-radius: var(--radius-oval); border: 2px solid var(--control-border);
+  background: transparent; color: var(--ink); cursor: pointer;
+  transition: transform var(--dur-press) var(--ease-out), background-color var(--dur-hover), color var(--dur-hover);
+}
+.icon-btn:active { transform: scale(.94); }
+.icon-btn[disabled] { opacity: .35; cursor: default; transform: none; }
+.icon-btn--inverse { border-color: var(--ink-inverse); color: var(--ink-inverse); }
+@media (hover: hover) and (pointer: fine) {
+  .icon-btn:not([disabled]):hover { background: var(--ink); color: var(--surface); }
+  .icon-btn--inverse:not([disabled]):hover { background: var(--ink-inverse); color: var(--surface-inverse); }
+}

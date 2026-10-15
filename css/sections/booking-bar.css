@@ -1,0 +1,11 @@
+.booking-bar-wrap { position: relative; z-index: 2; margin-top: calc(-1 * var(--space-8)); }
+.booking-bar {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: var(--space-3); align-items: end;
+  padding: var(--space-5); border-radius: var(--radius-md); background: var(--brand-white); box-shadow: var(--shadow-sheet);
+}
+.booking-bar__status { grid-column: 1 / -1; font-size: 14px; color: var(--ink-muted); }
+.booking-bar__status:empty { display: none; }
+@media (max-width: 760px) {
+  .booking-bar { grid-template-columns: 1fr 1fr; padding: var(--space-4); }
+  .booking-bar .field:nth-child(3), .booking-bar .btn { grid-column: 1 / -1; }
+}

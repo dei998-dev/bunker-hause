@@ -1,0 +1,24 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-3);
+  min-height: var(--tap-target); padding: 0 var(--space-5);
+  border-radius: var(--radius-sm); border: 2px solid transparent;
+  font-family: var(--font-sans); font-weight: 800; font-size: 14px; line-height: 1.43; letter-spacing: 0.02em;
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: transform var(--dur-press) var(--ease-out), background-color var(--dur-hover), color var(--dur-hover), border-color var(--dur-hover);
+}
+.btn:active { transform: scale(.97); }
+.btn--lg { min-height: 52px; padding: 0 var(--space-6); font-size: 15px; }
+.btn--full { width: 100%; }
+.btn--primary   { background: var(--accent); color: var(--on-accent); }
+.btn--secondary { background: transparent; color: var(--ink); border-color: var(--control-border); }
+.btn--inverse   { background: transparent; color: var(--brand-white); border-color: var(--brand-white); }
+.btn--light     { background: var(--brand-white); color: var(--brand-teal); }
+.btn--ghost     { background: transparent; color: var(--ink); padding: 0 var(--space-2); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; }
+.btn[disabled], .btn[aria-disabled="true"] { opacity: .45; cursor: not-allowed; transform: none; }
+@media (hover: hover) and (pointer: fine) {
+  .btn--primary:hover   { background: var(--accent-hover); }
+  .btn--secondary:hover { background: var(--ink); color: var(--surface); }
+  .btn--inverse:hover   { background: var(--brand-white); color: var(--brand-teal); }
+  .btn--light:hover     { background: var(--brand-paper); }
+  .btn--ghost:hover     { text-decoration-color: currentColor; }
+}

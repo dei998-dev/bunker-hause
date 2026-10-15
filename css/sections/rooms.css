@@ -1,0 +1,9 @@
+.rooms { background: var(--brand-white); }
+.rooms .carousel__track > li { width: clamp(260px, 76vw, 320px); }
+.amenities { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--hairline); }
+.amenity { display: flex; gap: var(--space-3); align-items: flex-start; }
+.amenity__icon { display: grid; place-items: center; flex: none; width: 48px; height: 48px; border-radius: var(--radius-squircle); background: var(--brand-paper); color: var(--brand-terracotta); }
+.amenity b { display: block; font-weight: 800; font-size: 15px; line-height: 1.35; }
+.amenity span { font-size: 14px; line-height: 1.5; color: var(--ink-muted); }
+@media (max-width: 900px) { .amenities { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .amenities { grid-template-columns: 1fr; } }

@@ -1,0 +1,35 @@
+.card { position: relative; display: flex; flex-direction: column; height: 100%; background: var(--surface-raised); border-radius: var(--radius-md); overflow: hidden; color: var(--ink); }
+.card__media { position: relative; overflow: hidden; background: var(--hairline); }
+.card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) { .card:hover .card__media img { transform: scale(1.04); } }
+.card__body { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-5); flex: 1; }
+.card__title { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1.15; }
+.card__title a { text-decoration: none; }
+.card__title a::after { content: ""; position: absolute; inset: 0; z-index: 1; } /* whole card clickable */
+.card__meta { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-3); color: var(--ink-muted); font-size: 14px; line-height: 1.55; }
+.card__meta span { display: inline-flex; align-items: center; gap: var(--space-1); }
+.card__meta .icon { width: 16px; height: 16px; }
+.card__note { font-size: 14px; line-height: 1.55; font-style: italic; color: var(--ink-muted); }
+.card__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; padding-top: var(--space-2); }
+.card__foot .btn { position: relative; z-index: 2; }
+.card__price { font-weight: 800; font-size: 20px; line-height: 1.2; }
+.card__price small { font-weight: 400; font-size: 14px; color: var(--ink-muted); }
+
+/* Event card */
+.event-card .card__media { aspect-ratio: 4 / 5; }
+.event-card__date {
+  position: absolute; top: var(--space-3); left: var(--space-3); width: 88px; height: 88px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--brand-teal); text-transform: uppercase; text-align: center;
+}
+.event-card__date .shape { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--brand-apricot); }
+.event-card__date span, .event-card__date b { position: relative; }
+.event-card__date b { font-family: var(--font-display); font-weight: 400; font-size: 30px; line-height: 1; }
+.event-card__date span { font-weight: 800; font-size: 11px; letter-spacing: 0.14em; line-height: 1.4; }
+.event-card__tag { position: absolute; top: var(--space-4); right: var(--space-4); }
+.event-card__soldout {
+  position: absolute; left: var(--space-4); right: var(--space-4); bottom: var(--space-4);
+  padding: var(--space-2); border-radius: var(--radius-sm); text-align: center;
+  background: var(--brand-charcoal); color: var(--brand-white);
+  font-weight: 800; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+}

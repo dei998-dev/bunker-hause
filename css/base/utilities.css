@@ -1,0 +1,24 @@
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; z-index: 100; top: var(--space-3); left: var(--space-3);
+  padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm);
+  background: var(--brand-teal); color: var(--brand-paper); font-weight: 800; text-decoration: none;
+  transform: translateY(-200%); transition: transform var(--dur-hover) var(--ease-out);
+}
+.skip-link:focus { transform: none; }
+/* Ticket: the proposal's notched square, as a mask for photos */
+.ticket {
+  -webkit-mask:
+    radial-gradient(var(--notch) at 0 0, #0000 98%, #000) 0 0 / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 100% 0, #0000 98%, #000) 100% 0 / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 0 100%, #0000 98%, #000) 0 100% / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 100% 100%, #0000 98%, #000) 100% 100% / 51% 51% no-repeat;
+  mask:
+    radial-gradient(var(--notch) at 0 0, #0000 98%, #000) 0 0 / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 100% 0, #0000 98%, #000) 100% 0 / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 0 100%, #0000 98%, #000) 0 100% / 51% 51% no-repeat,
+    radial-gradient(var(--notch) at 100% 100%, #0000 98%, #000) 100% 100% / 51% 51% no-repeat;
+}

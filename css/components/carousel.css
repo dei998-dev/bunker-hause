@@ -1,0 +1,18 @@
+/* Native scroll-snap carousel: swipe on phones, arrows on desktop */
+.carousel {
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel:focus-visible { outline-offset: -3px; }
+.carousel__track {
+  display: flex; gap: var(--space-5);
+  padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2));
+  padding-block: var(--space-2);
+  width: max-content;
+}
+.carousel__track > li { scroll-snap-align: start; flex: none; width: clamp(272px, 80vw, 340px); }
+.carousel-arrows { display: flex; gap: var(--space-2); }
+@media (hover: none), (pointer: coarse) { .carousel-arrows { display: none; } }
+.carousel__empty { padding: var(--space-6) 0; color: var(--ink-muted); }
